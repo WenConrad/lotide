@@ -19,7 +19,7 @@ const middle = function(midArray) {
   const halfLength = (midArray.length - 1) / 2;
   const floor = Math.floor(halfLength);
   const ceil = Math.ceil(halfLength + 1);
-  const mid = midArray.slice(floor, ceil);
+  const mid = (midArray.length > 2) ? midArray.slice(floor, ceil) : [];
   return mid;
 };
 
