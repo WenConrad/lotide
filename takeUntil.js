@@ -16,16 +16,15 @@ const assertEqual = function(actual, expected) {
 };
 
 const takeUntil = function(array, callback) {
-  let newArray = []
+  let newArray = [];
   for (let value of array) {
     if (callback(value)) {
-      return newArray
+      return newArray;
     } else {
       newArray.push(value);
     }
   }
-}
-
+};
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);
