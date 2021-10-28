@@ -7,16 +7,12 @@ const countLetters = function(wordToCount) {
   for (let letters of wordToCount) {
     if (letterCount[letters]) {
       letterCount[letters] += 1;
-    } else {
+    } else if (letters !== " ") {
       letterCount[letters] = 1;
     }
   }
   return letterCount;
 }
-
-
-
-
 
 const testExample = {
   l: 1,
