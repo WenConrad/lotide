@@ -7,3 +7,5 @@ const middle = function(midArray) {
     return [];
   }
 };
+
+module.exports = middle;
