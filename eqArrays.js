@@ -10,3 +10,5 @@ const eqArrays = function(arr1, arr2) {
     return false;
   }
 };
+
+module.exports = eqArrays;
