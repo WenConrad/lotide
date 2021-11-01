@@ -14,3 +14,5 @@ const without = function(sources, itemsToRemove) {
   }
   return removed;
 };
+
+module.exports = without;

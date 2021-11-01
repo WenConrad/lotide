@@ -9,3 +9,5 @@ const countLetters = function(wordToCount) {
   }
   return letterCount;
 };
+
+module.exports = countLetters;
