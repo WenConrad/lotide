@@ -1,10 +1,6 @@
-const assertEqual = function(actual, expected) {
-  console.log((actual === expected) ? `✅️ Assertion Passed: ${actual} === ${expected}` : `❌️ Assertion Failed: ${actual} !== ${expected}`);
-};
-
 const eqArrays = function(arr1, arr2) {
   if (arr1.length === arr2.length) {
-    for (let i = 0; i < arr1.length; i++) {
+    for (let i in arr1) {
       if (arr1[i] !== arr2[i]) {
         return false;
       }
@@ -31,12 +27,5 @@ const eqObjects = function(obj1, obj2) {
     return true;
   }
 };
-
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), true);
-
-const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, cd2), false);
 
 module.exports = eqObjects;
